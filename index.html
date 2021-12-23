@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>jQuery 선택자</title>
+</head>
+<body>
+     <h1>[ 제이쿼리 셀렉터(선택자) ]</h1>
+
+     <p>제이쿼리는 제어를 위한 다양한 함수도 제공하며, 크로스브라우징도 함께 지원합니다!</p>
+     
+     <ol>
+          <li class="list1 first">당근</li>
+          <li class="list1">양파</li>
+          <li class="list1">양배추</li>
+          <li class="list1">피망</li>
+          <li class="list1">여우</li>
+          <li class="list2" id="cat">고양이</li>
+          <li class="list2">새</li>
+          <li class="list2" id="dog">강아지</li>
+          <li class="list2">물고기</li>
+     </ol>
+
+     <div class="box">
+          <p>우리는 웹퍼블리셔 입니다!</p>
+          <div>
+               <p>제이쿼리의 다양한 선택자를 활용해 봅시다!</p>
+          </div>
+     </div>
+     
+     <p>
+          <label for="t1">Message :</label>
+          <input type="text" name="msg" id="t1">
+     </p>
+     <!-- 제이쿼리 호출 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     <script>
+          $(function(){
+               //사용할 함수 : 스타일 지정 함수
+               //구문형식 : $('대상').css('속성', '속성값'); <- 속성이 하나일때 
+               /* 속성이 여러개일때
+               $('대상').css({
+                    '속성1', '속성값',
+                    '속성2', '속성값',
+                    '속성3', '속성값'
+               });
+               */
+               //태그선택자
+               $('h1').css('background-color', '#fc0')
+               $('ol li').css({
+                    'background-color': '#888',
+                    'color': 'red',
+                    'padding-bottom': '20px'
+               });
+          });
+               // 선택자 그룹지정
+               $('.list1, .list2').css({
+                    'border' : '1px solid #000',
+                    'padding' : 10,
+                    'color' : '#333'
+               });
+               // 
+     </script>
+<hr>
+</body>
+</html>
